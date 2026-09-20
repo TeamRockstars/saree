@@ -1,0 +1,170 @@
+export type Category = 'Silk' | 'Bridal' | 'Festive';
+
+export interface Product {
+  id: number;
+  name: string;
+  category: Category;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  description: string;
+  fabric: string;
+  origin: string;
+  colors: string[];
+  bestseller?: boolean;
+  featured?: boolean;
+}
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Kanchipuram Royal Blue Silk Saree',
+    category: 'Silk',
+    price: 18500,
+    originalPrice: 22000,
+    image: 'https://images.pexels.com/photos/10317113/pexels-photo-10317113.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A regal Kanchipuram silk saree in deep royal blue, woven with pure zari motifs and a contrasting gold border. Each thread tells a story of South Indian temple artistry.',
+    fabric: 'Pure Mulberry Silk',
+    origin: 'Kanchipuram, Tamil Nadu',
+    colors: ['Royal Blue', 'Gold'],
+    bestseller: true,
+    featured: true,
+  },
+  {
+    id: 2,
+    name: 'Banarasi Maroon Bridal Saree',
+    category: 'Bridal',
+    price: 32000,
+    originalPrice: 38000,
+    image: 'https://images.pexels.com/photos/17468599/pexels-photo-17468599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'An exquisite Banarasi bridal saree in rich maroon with intricate gold brocade work. Crafted for the bride who carries centuries of tradition with grace.',
+    fabric: 'Pure Silk with Gold Zari',
+    origin: 'Varanasi, Uttar Pradesh',
+    colors: ['Maroon', 'Gold'],
+    bestseller: true,
+    featured: true,
+  },
+  {
+    id: 3,
+    name: 'Festive Red Kanjivaram Saree',
+    category: 'Festive',
+    price: 14500,
+    image: 'https://images.pexels.com/photos/5447529/pexels-photo-5447529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A vibrant festive red Kanjivaram saree with golden paisley motifs and traditional temple border. Perfect for celebrations and special occasions.',
+    fabric: 'Kanjivaram Silk',
+    origin: 'Kanchipuram, Tamil Nadu',
+    colors: ['Red', 'Gold'],
+    bestseller: true,
+    featured: true,
+  },
+  {
+    id: 4,
+    name: 'Ivory Gold Tussar Silk Saree',
+    category: 'Silk',
+    price: 12500,
+    image: 'https://images.pexels.com/photos/6167463/pexels-photo-6167463.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'An elegant ivory Tussar silk saree with delicate golden paisley embroidery. Understated luxury for the woman who appreciates subtle beauty.',
+    fabric: 'Tussar Silk',
+    origin: 'Bhagalpur, Bihar',
+    colors: ['Ivory', 'Gold'],
+    featured: true,
+  },
+  {
+    id: 5,
+    name: 'Crimson Bridal Silk Saree',
+    category: 'Bridal',
+    price: 28500,
+    originalPrice: 34000,
+    image: 'https://images.pexels.com/photos/28943617/pexels-photo-28943617.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A breathtaking crimson bridal saree with all-over zari work and a beautifully crafted pallu. Designed to make your special day unforgettable.',
+    fabric: 'Pure Silk with Zari',
+    origin: 'Kanchipuram, Tamil Nadu',
+    colors: ['Crimson', 'Gold'],
+    bestseller: true,
+    featured: true,
+  },
+  {
+    id: 6,
+    name: 'Teal Blue Silk Festive Saree',
+    category: 'Festive',
+    price: 16500,
+    image: 'https://images.pexels.com/photos/7676347/pexels-photo-7676347.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A stunning teal blue silk saree with gold embroidery and traditional motifs. A modern color with timeless weaving techniques.',
+    fabric: 'Pure Silk',
+    origin: 'Varanasi, Uttar Pradesh',
+    colors: ['Teal', 'Gold'],
+    featured: true,
+  },
+  {
+    id: 7,
+    name: 'Pink Gold Chanderi Silk Saree',
+    category: 'Silk',
+    price: 9500,
+    image: 'https://images.pexels.com/photos/8711176/pexels-photo-8711176.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A delicate pink Chanderi silk saree with intricate gold embroidery. Lightweight and graceful, perfect for daytime celebrations.',
+    fabric: 'Chanderi Silk',
+    origin: 'Chanderi, Madhya Pradesh',
+    colors: ['Pink', 'Gold'],
+  },
+  {
+    id: 8,
+    name: 'Red Bridal Kanjivaram Saree',
+    category: 'Bridal',
+    price: 35000,
+    originalPrice: 42000,
+    image: 'https://images.pexels.com/photos/36251517/pexels-photo-36251517.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A magnificent red Kanjivaram bridal saree with a wide gold border and traditional motifs. The epitome of South Indian bridal elegance.',
+    fabric: 'Kanjivaram Silk with Pure Zari',
+    origin: 'Kanchipuram, Tamil Nadu',
+    colors: ['Red', 'Gold'],
+    bestseller: true,
+  },
+  {
+    id: 9,
+    name: 'Gold Zari Festive Saree',
+    category: 'Festive',
+    price: 19500,
+    image: 'https://images.pexels.com/photos/7232843/pexels-photo-7232843.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A shimmering gold zari festive saree that catches every light. Woven with traditional techniques for the woman who loves to shine.',
+    fabric: 'Silk with Gold Zari',
+    origin: 'Varanasi, Uttar Pradesh',
+    colors: ['Gold'],
+    bestseller: true,
+  },
+  {
+    id: 10,
+    name: 'Traditional Red Silk Saree',
+    category: 'Silk',
+    price: 15500,
+    image: 'https://images.pexels.com/photos/6045294/pexels-photo-6045294.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A classic red silk saree with traditional oriental patterns and floral motifs. A timeless piece for every wardrobe.',
+    fabric: 'Pure Silk',
+    origin: 'Kanchipuram, Tamil Nadu',
+    colors: ['Red'],
+  },
+  {
+    id: 11,
+    name: 'Elegant Maroon Bridal Saree',
+    category: 'Bridal',
+    price: 26000,
+    image: 'https://images.pexels.com/photos/17152210/pexels-photo-17152210.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'An elegant maroon bridal saree with ornate traditional jewelry work. Crafted for the bride who embodies grace and heritage.',
+    fabric: 'Pure Silk with Zari',
+    origin: 'Varanasi, Uttar Pradesh',
+    colors: ['Maroon', 'Gold'],
+    featured: true,
+  },
+  {
+    id: 12,
+    name: 'Vibrant Festive Silk Saree',
+    category: 'Festive',
+    price: 11500,
+    image: 'https://images.pexels.com/photos/28210882/pexels-photo-28210882.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'A vibrant and colorful festive silk saree that celebrates the joy of Indian traditions. Lightweight, comfortable, and stunning.',
+    fabric: 'Art Silk',
+    origin: 'Mysore, Karnataka',
+    colors: ['Multicolor'],
+  },
+];
+
+export const categories: Category[] = ['Silk', 'Bridal', 'Festive'];
