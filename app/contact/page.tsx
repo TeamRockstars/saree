@@ -50,8 +50,16 @@ const contactInfo = [
 ];
 
 const socials = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Facebook, label: 'Facebook', href: '#' },
+  {
+    icon: Instagram,
+    label: 'Instagram',
+    href: 'https://www.instagram.com/gajendrasilks?stkn=eXk1N2VtaHBjeW5m&utm_source=qr',
+  },
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/Gajendrasilks/',
+  },
   { icon: Youtube, label: 'YouTube', href: '#' },
 ];
 
@@ -346,6 +354,8 @@ export default function ContactPage() {
                       <a
                         key={social.label}
                         href={social.href}
+                        target={social.href !== '#' ? '_blank' : undefined}
+                        rel={social.href !== '#' ? 'noopener noreferrer' : undefined}
                         aria-label={social.label}
                         className="flex h-11 w-11 items-center justify-center border border-border bg-card transition-all hover:border-gold hover:bg-gold hover:text-maroon"
                       >

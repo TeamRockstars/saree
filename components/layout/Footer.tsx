@@ -89,10 +89,25 @@ export default function Footer() {
               </li>
             </ul>
             <div className="mt-5 flex gap-4">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+              {[
+                {
+                  icon: Instagram,
+                  label: 'Instagram',
+                  href: 'https://www.instagram.com/gajendrasilks?stkn=eXk1N2VtaHBjeW5m&utm_source=qr',
+                },
+                {
+                  icon: Facebook,
+                  label: 'Facebook',
+                  href: 'https://www.facebook.com/Gajendrasilks/',
+                },
+                { icon: Youtube, label: 'YouTube', href: '#' },
+              ].map(({ icon: Icon, label, href }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target={href !== '#' ? '_blank' : undefined}
+                  rel={href !== '#' ? 'noopener noreferrer' : undefined}
+                  aria-label={label}
                   className="flex h-9 w-9 items-center justify-center border border-cream/30 transition-colors hover:border-gold hover:bg-gold hover:text-maroon"
                 >
                   <Icon className="h-4 w-4" />
