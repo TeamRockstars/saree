@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useCart } from '@/lib/cart-context';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { itemCount, openCart } = useCart();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -80,12 +82,23 @@ export default function Navbar() {
           </ul>
 
           {/* Right actions */}
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="flex items-center gap-3 lg:gap-4">
+            <button
+              onClick={openCart}
+              className="relative flex items-center gap-2 text-maroon transition-colors hover:text-gold"
+              aria-label="Open cart"
+            >
+              <ShoppingBag className="h-5 w-5" />
+              {itemCount > 0 && (
+                <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-gold text-[10px] font-semibold text-maroon">
+                  {itemCount}
+                </span>
+              )}
+            </button>
             <Link
               href="/shop"
-              className="flex items-center gap-2 bg-maroon px-6 py-2.5 text-xs font-medium uppercase tracking-widest text-cream transition-colors hover:bg-gold hover:text-maroon"
+              className="hidden bg-maroon px-6 py-2.5 text-xs font-medium uppercase tracking-widest text-cream transition-colors hover:bg-gold hover:text-maroon lg:flex"
             >
-              <ShoppingBag className="h-4 w-4" />
               Shop Now
             </Link>
           </div>

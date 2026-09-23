@@ -3,6 +3,7 @@
 import { Product } from '@/lib/products';
 import { X, ShoppingBag, Heart } from 'lucide-react';
 import LuxeButton from '@/components/ui/LuxeButton';
+import { useCart } from '@/lib/cart-context';
 
 interface ProductModalProps {
   product: Product | null;
@@ -10,6 +11,8 @@ interface ProductModalProps {
 }
 
 export default function ProductModal({ product, onClose }: ProductModalProps) {
+  const { addToCart } = useCart();
+
   if (!product) return null;
 
   return (
@@ -100,7 +103,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <LuxeButton className="flex-1">
+              <LuxeButton
+                className="flex-1"
+                onClick={() => {
+                  addToCart(product);
+                  onClose();
+                }}
+              >
                 <ShoppingBag className="mr-2 h-4 w-4" />
                 Add to Cart
               </LuxeButton>
