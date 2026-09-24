@@ -53,6 +53,18 @@ const config: Config = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        gold: 'hsl(var(--gold))',
+        maroon: {
+          DEFAULT: 'hsl(var(--maroon))',
+          dark: 'hsl(var(--maroon-dark))',
+        },
+        ivory: 'hsl(var(--ivory))',
+        beige: 'hsl(var(--beige))',
+        ink: 'hsl(var(--ink))',
+        sale: {
+          DEFAULT: 'hsl(var(--sale))',
+          foreground: 'hsl(var(--ivory))',
+        },
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',

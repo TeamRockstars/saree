@@ -21,12 +21,12 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
       onClick={onClose}
     >
       <div
-        className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto bg-cream shadow-2xl"
+        className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto bg-ivory shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center bg-cream/80 text-maroon transition-colors hover:bg-maroon hover:text-cream"
+          className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center bg-ivory/80 text-maroon transition-colors hover:bg-maroon hover:text-ivory"
           aria-label="Close"
         >
           <X className="h-5 w-5" />
@@ -44,7 +44,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
           {/* Details */}
           <div className="flex flex-col justify-center p-6 md:p-10">
-            <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-gold">
+            <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-maroon">
               {product.category}
             </p>
             <h2 className="mt-2 font-serif-display text-2xl font-medium text-maroon md:text-3xl">

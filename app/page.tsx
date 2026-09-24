@@ -46,10 +46,10 @@ export default function Home() {
             alt="Woman in luxury silk saree"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-maroon/50 via-maroon/30 to-maroon/60" />
+          <div className="absolute inset-0 scrim-overlay" />
         </div>
 
-        <div className="relative z-10 px-4 text-center text-cream">
+        <div className="relative z-10 px-4 text-center text-ivory">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.4em] text-gold animate-fade-in-up">
             Heritage Handwoven Since 1978
           </p>
@@ -58,7 +58,7 @@ export default function Home() {
             <br />
             <span className="gold-text">Silk &amp; Tradition</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base font-light leading-relaxed text-cream/85 md:text-lg animate-fade-in-up">
+          <p className="mx-auto mt-6 max-w-xl text-base font-light leading-relaxed text-ivory/85 md:text-lg animate-fade-in-up">
             Each Gajendra saree is woven by master artisans, carrying centuries
             of Indian heritage in every thread of silk and gold.
           </p>
@@ -71,9 +71,8 @@ export default function Home() {
             </Link>
             <Link href="/about">
               <LuxeButton
-                variant="outline"
+                variant="overlay"
                 size="lg"
-                className="border-cream text-cream hover:bg-cream hover:text-maroon"
               >
                 Our Story
               </LuxeButton>
@@ -82,16 +81,16 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/60">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory/80 drop-shadow-md">
           <div className="flex flex-col items-center gap-2">
             <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-            <div className="h-12 w-px bg-cream/40" />
+            <div className="h-12 w-px bg-ivory/60" />
           </div>
         </div>
       </section>
 
       {/* Featured Sarees */}
-      <Section className="bg-cream">
+      <Section className="bg-ivory">
         <SectionHeading
           eyebrow="Curated Selection"
           title="Featured Sarees"
@@ -152,12 +151,12 @@ export default function Home() {
                 alt={col.title}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-maroon/80 via-maroon/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-center text-cream">
+              <div className="absolute inset-0 bg-gradient-to-t from-maroon-dark/80 via-maroon-dark/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-center text-ivory">
                 <h3 className="font-serif-display text-2xl font-medium md:text-3xl">
                   {col.title}
                 </h3>
-                <p className="mt-1 text-xs font-light uppercase tracking-widest text-cream/80">
+                <p className="mt-1 text-xs font-light uppercase tracking-widest text-ivory/80">
                   {col.subtitle}
                 </p>
                 <span className="mt-3 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-gold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -170,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* Bestsellers */}
-      <Section className="bg-ivory">
+      <Section className="bg-beige">
         <SectionHeading
           eyebrow="Loved by Many"
           title="Bestsellers"
@@ -235,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews */}
-      <Section className="bg-cream">
+      <Section className="bg-ivory">
         <SectionHeading
           eyebrow="Words of Love"
           title="Customer Stories"
@@ -247,7 +246,7 @@ export default function Home() {
               key={i}
               className="border border-border bg-card p-8 text-center transition-shadow hover:shadow-lg"
             >
-              <Quote className="mx-auto h-8 w-8 text-gold/40" />
+              <Quote className="mx-auto h-8 w-8 text-gold/60" />
               <div className="mt-4 flex justify-center gap-1">
                 {Array.from({ length: review.rating }).map((_, idx) => (
                   <Star
@@ -273,7 +272,7 @@ export default function Home() {
       </Section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-maroon py-20 text-center">
+      <section className="relative overflow-hidden bg-maroon-dark py-20 text-center">
         <div className="absolute inset-0 opacity-10">
           <img
             src="https://images.pexels.com/photos/10317113/pexels-photo-10317113.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
@@ -282,10 +281,10 @@ export default function Home() {
           />
         </div>
         <div className="relative z-10 mx-auto max-w-2xl px-4">
-          <h2 className="font-serif-display text-3xl font-medium text-cream md:text-4xl">
+          <h2 className="font-serif-display text-3xl font-medium text-ivory md:text-4xl">
             Drape Yourself in Heritage
           </h2>
-          <p className="mt-4 text-base font-light text-cream/70">
+          <p className="mt-4 text-base font-light text-ivory/70">
             Explore our full collection of handwoven silk sarees, each one a
             masterpiece of Indian craftsmanship.
           </p>

@@ -43,13 +43,13 @@ export default function CartDrawer() {
       {/* Drawer */}
       <aside
         className={cn(
-          'fixed right-0 top-0 z-[95] flex h-full w-full max-w-md flex-col bg-cream shadow-2xl transition-transform duration-300',
+          'fixed right-0 top-0 z-[95] flex h-full w-full max-w-md flex-col bg-ivory shadow-2xl transition-transform duration-300',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-border bg-maroon px-6 py-4">
-          <div className="flex items-center gap-2 text-cream">
+        <div className="flex items-center justify-between border-b border-border bg-maroon-dark px-6 py-4">
+          <div className="flex items-center gap-2 text-ivory">
             <ShoppingBag className="h-5 w-5 text-gold" />
             <h2 className="font-serif-display text-xl font-medium">
               Shopping Cart
@@ -62,7 +62,7 @@ export default function CartDrawer() {
           </div>
           <button
             onClick={closeCart}
-            className="text-cream/80 transition-colors hover:text-gold"
+            className="text-ivory/80 transition-colors hover:text-gold"
             aria-label="Close cart"
           >
             <X className="h-5 w-5" />
@@ -92,7 +92,7 @@ export default function CartDrawer() {
             </p>
             <button
               onClick={closeCart}
-              className="mt-6 border-2 border-maroon px-8 py-3 text-xs font-medium uppercase tracking-widest text-maroon transition-all hover:bg-maroon hover:text-cream"
+              className="mt-6 border-2 border-maroon px-8 py-3 text-xs font-medium uppercase tracking-widest text-maroon transition-all hover:bg-maroon hover:text-ivory"
             >
               Continue Shopping
             </button>
@@ -188,7 +188,7 @@ export default function CartDrawer() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="flex w-full items-center justify-center bg-maroon px-6 py-4 text-xs font-medium uppercase tracking-widest text-cream transition-colors hover:bg-gold hover:text-maroon disabled:opacity-50"
+                  className="flex w-full items-center justify-center bg-maroon px-6 py-4 text-xs font-medium uppercase tracking-widest text-ivory transition-colors hover:bg-maroon-dark disabled:opacity-50"
                 >
                   {status === 'loading' ? (
                     <>
@@ -223,7 +223,7 @@ export default function CartDrawer() {
                     <h4 className="font-serif-display text-base font-medium leading-tight text-maroon">
                       {item.product.name}
                     </h4>
-                    <p className="mt-0.5 text-[10px] font-medium uppercase tracking-widest text-gold">
+                    <p className="mt-0.5 text-[10px] font-medium uppercase tracking-widest text-maroon">
                       {item.product.category}
                     </p>
                     <p className="mt-1 text-sm font-medium text-maroon">
@@ -273,7 +273,7 @@ export default function CartDrawer() {
               </p>
               <button
                 onClick={() => setCheckoutMode(true)}
-                className="mt-4 w-full bg-maroon px-6 py-4 text-xs font-medium uppercase tracking-widest text-cream transition-colors hover:bg-gold hover:text-maroon"
+                className="mt-4 w-full bg-maroon px-6 py-4 text-xs font-medium uppercase tracking-widest text-ivory transition-colors hover:bg-maroon-dark"
               >
                 Proceed to Checkout
               </button>

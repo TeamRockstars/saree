@@ -32,13 +32,13 @@ export default function ProductCard({ product, onClick, className }: ProductCard
           </span>
         )}
         {product.originalPrice && (
-          <span className="absolute right-3 top-3 bg-primary px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-primary-foreground">
+          <span className="absolute right-3 top-3 bg-sale px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-ivory">
             Sale
           </span>
         )}
         {/* Quick view overlay */}
-        <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <span className="mb-5 border border-cream/50 px-6 py-2 text-xs font-medium uppercase tracking-widest text-cream backdrop-blur-sm">
+        <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-maroon-dark/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <span className="mb-5 border border-ivory/50 px-6 py-2 text-xs font-medium uppercase tracking-widest text-ivory backdrop-blur-sm">
             Quick View
           </span>
         </div>
@@ -46,10 +46,10 @@ export default function ProductCard({ product, onClick, className }: ProductCard
 
       {/* Details */}
       <div className="px-1 py-4 text-center">
-        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold">
+        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-maroon">
           {product.category}
         </p>
-        <h3 className="mt-1.5 font-serif-display text-lg font-medium text-maroon transition-colors group-hover:text-gold">
+        <h3 className="mt-1.5 font-serif-display text-lg font-medium text-maroon transition-colors group-hover:text-maroon-dark">
           {product.name}
         </h3>
         <div className="mt-2 flex items-center justify-center gap-2">

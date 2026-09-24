@@ -6,52 +6,64 @@
 
 @layer base {
   :root {
-    --background: 42 33% 96%;
-    --foreground: 340 20% 12%;
-    --card: 42 33% 98%;
-    --card-foreground: 340 20% 12%;
-    --popover: 42 33% 98%;
-    --popover-foreground: 340 20% 12%;
-    --primary: 348 53% 26%;
-    --primary-foreground: 42 33% 96%;
-    --secondary: 42 36% 90%;
-    --secondary-foreground: 340 20% 12%;
-    --muted: 42 20% 88%;
-    --muted-foreground: 340 10% 40%;
-    --accent: 43 74% 50%;
-    --accent-foreground: 340 20% 12%;
-    --destructive: 0 72% 45%;
-    --destructive-foreground: 42 33% 96%;
-    --border: 42 20% 82%;
-    --input: 42 20% 82%;
-    --ring: 348 53% 26%;
+    /* Ivory #FBF6EE → hsl(38, 70%, 97%) */
+    --background: 38 70% 97%;
+    --foreground: 16 30% 14%;
+    /* Ivory #FBF6EE */
+    --card: 38 70% 97%;
+    --card-foreground: 16 30% 14%;
+    --popover: 38 70% 97%;
+    --popover-foreground: 16 30% 14%;
+    /* Deep Maroon #5E1423 */
+    --primary: 345 64% 22%;
+    --primary-foreground: 38 70% 97%;
+    /* Warm Beige #F3E9D8 */
+    --secondary: 39 52% 90%;
+    --secondary-foreground: 16 30% 14%;
+    --muted: 39 35% 85%;
+    /* Ink Brown #2A1E1A */
+    --muted-foreground: 16 25% 14%;
+    /* Antique Gold #A9772F */
+    --accent: 33 57% 42%;
+    --accent-foreground: 38 70% 97%;
+    /* Rich Red #8B1E2E */
+    --destructive: 346 64% 33%;
+    --destructive-foreground: 38 70% 97%;
+    --border: 33 30% 80%;
+    --input: 33 30% 80%;
+    --ring: 345 64% 22%;
     --radius: 0.25rem;
-    --gold: 43 74% 50%;
-    --maroon: 348 53% 26%;
-    --cream: 42 33% 96%;
-    --ivory: 42 50% 98%;
+
+    /* Custom palette tokens */
+    --gold: 33 57% 42%;          /* #A9772F Antique Gold */
+    --maroon: 345 64% 22%;        /* #5E1423 Deep Maroon */
+    --maroon-dark: 343 68% 14%;   /* #3D0D18 Maroon-Dark */
+    --ivory: 38 70% 97%;          /* #FBF6EE Ivory */
+    --beige: 39 52% 90%;           /* #F3E9D8 Warm Beige */
+    --ink: 16 30% 14%;             /* #2A1E1A Ink Brown */
+    --sale: 346 64% 33%;           /* #8B1E2E Rich Red */
   }
 
   .dark {
-    --background: 340 20% 8%;
-    --foreground: 42 33% 96%;
-    --card: 340 20% 10%;
-    --card-foreground: 42 33% 96%;
-    --popover: 340 20% 10%;
-    --popover-foreground: 42 33% 96%;
-    --primary: 43 74% 50%;
-    --primary-foreground: 340 20% 8%;
-    --secondary: 340 15% 18%;
-    --secondary-foreground: 42 33% 96%;
-    --muted: 340 15% 16%;
-    --muted-foreground: 42 15% 65%;
-    --accent: 43 74% 50%;
-    --accent-foreground: 340 20% 8%;
-    --destructive: 0 62% 40%;
-    --destructive-foreground: 42 33% 96%;
-    --border: 340 15% 20%;
-    --input: 340 15% 20%;
-    --ring: 43 74% 50%;
+    --background: 343 68% 14%;
+    --foreground: 38 70% 97%;
+    --card: 343 68% 18%;
+    --card-foreground: 38 70% 97%;
+    --popover: 343 68% 14%;
+    --popover-foreground: 38 70% 97%;
+    --primary: 38 70% 97%;
+    --primary-foreground: 343 68% 14%;
+    --secondary: 343 30% 25%;
+    --secondary-foreground: 38 70% 97%;
+    --muted: 343 25% 22%;
+    --muted-foreground: 38 30% 75%;
+    --accent: 33 57% 42%;
+    --accent-foreground: 38 70% 97%;
+    --destructive: 346 64% 33%;
+    --destructive-foreground: 38 70% 97%;
+    --border: 343 25% 30%;
+    --input: 343 25% 30%;
+    --ring: 33 57% 42%;
   }
 }
 
@@ -89,20 +101,50 @@
   .bg-maroon {
     background-color: hsl(var(--maroon));
   }
-  .bg-cream {
-    background-color: hsl(var(--cream));
+  .bg-maroon-dark {
+    background-color: hsl(var(--maroon-dark));
+  }
+  .text-maroon-dark {
+    color: hsl(var(--maroon-dark));
   }
   .bg-ivory {
     background-color: hsl(var(--ivory));
   }
+  .bg-beige {
+    background-color: hsl(var(--beige));
+  }
+  .text-ink {
+    color: hsl(var(--ink));
+  }
+  .bg-ink {
+    background-color: hsl(var(--ink));
+  }
+  .text-ivory {
+    color: hsl(var(--ivory));
+  }
+  .bg-sale {
+    background-color: hsl(var(--sale));
+  }
+  .text-sale {
+    color: hsl(var(--sale));
+  }
   .border-gold {
     border-color: hsl(var(--gold));
   }
+  .border-maroon {
+    border-color: hsl(var(--maroon));
+  }
+  .border-maroon-dark {
+    border-color: hsl(var(--maroon-dark));
+  }
+  .border-ivory {
+    border-color: hsl(var(--ivory));
+  }
   .gold-gradient {
-    background: linear-gradient(135deg, hsl(43 74% 55%), hsl(43 74% 45%), hsl(43 74% 55%));
+    background: linear-gradient(135deg, hsl(33 57% 48%), hsl(33 57% 42%), hsl(33 57% 48%));
   }
   .gold-text {
-    background: linear-gradient(135deg, hsl(43 74% 45%), hsl(40 80% 60%), hsl(43 74% 45%));
+    background: linear-gradient(135deg, hsl(33 57% 42%), hsl(35 65% 55%), hsl(33 57% 42%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -113,74 +155,15 @@
   .container-lux {
     @apply mx-auto max-w-7xl;
   }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: hsl(var(--cream));
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--maroon));
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(348 53% 20%);
-}
-
-/* Decorative divider */
-.decorative-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 1rem 0;
-}
-.decorative-divider::before,
-.decorative-divider::after {
-  content: '';
-  height: 1px;
-  width: 60px;
-  background: linear-gradient(to right, transparent, hsl(var(--gold)), transparent);
-}
-
-/* Fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .scrim-overlay {
+    background: linear-gradient(180deg, rgba(61,13,24,0.35) 0%, rgba(61,13,24,0.15) 35%, rgba(61,13,24,0.55) 100%);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .scrim-overlay-strong {
+    background: linear-gradient(180deg, rgba(61,13,24,0.5) 0%, rgba(61,13,24,0.3) 40%, rgba(61,13,24,0.7) 100%);
   }
-}
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* Image zoom on hover */
-.img-zoom {
-  overflow: hidden;
-}
-.img-zoom img {
-  transition: transform 0.6s ease;
-}
-.img-zoom:hover img {
-  transform: scale(1.05);
+  .overlay-btn {
+    background: rgba(61,13,24,0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
 }

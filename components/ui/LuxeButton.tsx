@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { ButtonHTMLAttributes, forwardRef } from 'react';
 
 interface LuxeButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'gold' | 'outline' | 'ghost';
+  variant?: 'primary' | 'gold' | 'outline' | 'ghost' | 'overlay';
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -10,12 +10,14 @@ const LuxeButton = forwardRef<HTMLButtonElement, LuxeButtonProps>(
   ({ className, variant = 'primary', size = 'md', ...props }, ref) => {
     const variants = {
       primary:
-        'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md',
+        'bg-maroon text-ivory hover:bg-maroon-dark shadow-md',
       gold:
-        'bg-gold text-maroon hover:bg-gold/90 shadow-md',
+        'bg-gold text-ivory hover:bg-gold/90 shadow-md',
       outline:
-        'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground',
-      ghost: 'text-primary hover:bg-primary/10',
+        'border-2 border-maroon text-maroon hover:bg-maroon hover:text-ivory',
+      ghost: 'text-maroon hover:bg-maroon/10',
+      overlay:
+        'overlay-btn border-2 border-ivory text-ivory hover:bg-maroon-dark hover:border-maroon-dark',
     };
     const sizes = {
       sm: 'px-4 py-2 text-xs tracking-widest',
