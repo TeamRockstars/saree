@@ -119,16 +119,16 @@ export default function ContactPage() {
             alt="Woman in colorful saree"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-maroon/50" />
+          <div className="absolute inset-0 scrim-overlay" />
         </div>
-        <div className="relative z-10 px-4 text-center text-cream">
+        <div className="relative z-10 px-4 text-center text-ivory">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.4em] text-gold">
             We&apos;d Love to Hear From You
           </p>
           <h1 className="font-serif-display text-4xl font-medium md:text-6xl">
             Contact Us
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-base font-light text-cream/80">
+          <p className="mx-auto mt-4 max-w-xl text-base font-light text-ivory/80">
             Whether you have a question about our sarees or need help choosing
             the perfect one — we&apos;re here for you.
           </p>
@@ -136,7 +136,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info Cards */}
-      <Section className="bg-cream">
+      <Section className="bg-ivory">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {contactInfo.map((info) => (
             <a
@@ -147,7 +147,7 @@ export default function ContactPage() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center border border-gold/40 transition-colors group-hover:bg-gold group-hover:text-maroon">
                 <info.icon className="h-6 w-6 text-gold transition-colors group-hover:text-maroon" />
               </div>
-              <h3 className="mt-5 text-xs font-medium uppercase tracking-widest text-gold">
+              <h3 className="mt-5 text-xs font-medium uppercase tracking-widest text-maroon">
                 {info.label}
               </h3>
               <p className="mt-2 font-serif-display text-lg font-medium text-maroon">
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         required
                         value={form.name}
                         onChange={handleChange}
-                        className="w-full border border-border bg-cream px-4 py-3 text-sm font-light text-maroon placeholder:text-muted-foreground focus:border-gold focus:outline-none"
+                        className="w-full border border-border bg-beige px-4 py-3 text-sm font-light text-ink placeholder:text-muted-foreground focus:border-maroon focus:outline-none"
                         placeholder="Your full name"
                       />
                     </div>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                         name="phone"
                         value={form.phone}
                         onChange={handleChange}
-                        className="w-full border border-border bg-cream px-4 py-3 text-sm font-light text-maroon placeholder:text-muted-foreground focus:border-gold focus:outline-none"
+                        className="w-full border border-border bg-beige px-4 py-3 text-sm font-light text-ink placeholder:text-muted-foreground focus:border-maroon focus:outline-none"
                         placeholder="+91 98765 43210"
                       />
                     </div>
@@ -224,7 +224,7 @@ export default function ContactPage() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full border border-border bg-cream px-4 py-3 text-sm font-light text-maroon placeholder:text-muted-foreground focus:border-gold focus:outline-none"
+                      className="w-full border border-border bg-beige px-4 py-3 text-sm font-light text-ink placeholder:text-muted-foreground focus:border-maroon focus:outline-none"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                       name="subject"
                       value={form.subject}
                       onChange={handleChange}
-                      className="w-full border border-border bg-cream px-4 py-3 text-sm font-light text-maroon placeholder:text-muted-foreground focus:border-gold focus:outline-none"
+                      className="w-full border border-border bg-beige px-4 py-3 text-sm font-light text-ink placeholder:text-muted-foreground focus:border-maroon focus:outline-none"
                       placeholder="How can we help?"
                     />
                   </div>
@@ -251,7 +251,7 @@ export default function ContactPage() {
                       rows={5}
                       value={form.message}
                       onChange={handleChange}
-                      className="w-full border border-border bg-cream px-4 py-3 text-sm font-light text-maroon placeholder:text-muted-foreground focus:border-gold focus:outline-none"
+                      className="w-full border border-border bg-beige px-4 py-3 text-sm font-light text-ink placeholder:text-muted-foreground focus:border-maroon focus:outline-none"
                       placeholder="Tell us what you're looking for..."
                     />
                   </div>
@@ -346,7 +346,7 @@ export default function ContactPage() {
 
                 {/* Social */}
                 <div>
-                  <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-gold">
+                  <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-maroon">
                     Follow Us
                   </h3>
                   <div className="flex gap-4">
